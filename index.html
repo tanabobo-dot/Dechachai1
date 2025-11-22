@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dechachai Company</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f4f4f4;
+    }
+header {
+    background: #002855;
+    color: #fff;
+    padding: 25px 40px;
+    text-align: center;
+    position: relative;
+}
+ .container { 
+        width: 80%; 
+        margin: 30px auto; 
+        background: #fff; 
+        border-radius: 10px; 
+        padding: 20px 25px 40px; 
+        box-shadow: 0 0 10px rgba(0,0,0,0.1); 
+    } 
+
+  h2 { 
+        margin-top: 10px; 
+        border-bottom: 2px solid #eee; 
+        padding-bottom: 8px; 
+    } 
+
+    .header-inner {
+        max-width: 85%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;   /* ข้อความกลาง */
+        position: relative;        /* ใช้เป็น reference ให้นาฬิกา/โลโก้ */
+    }
+
+    .logo-wrap {
+        position: absolute;
+        left: 40px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .logo {
+        width: 120px;
+        border-radius: 160px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        margin: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .header-text {
+        text-align: center;
+    }
+
+    .header-text h1 {
+        margin: 0;
+        font-size: 34px;
+    }
+
+    .header-text p {
+        margin: 5px 0 0;
+        font-size: 20px;
+        opacity: 0.9;
+    }
+
+    .header-clock {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 34px;
+        font-weight: 300;
+        color: #ffffff;
+        letter-spacing: 2px;
+        background: rgba(255,255,255,0.12);
+        padding: 10px 20px;
+        border-radius: 12px;
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    }
+
+.contact-section {
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    margin: 30px 0;
+}
+
+.contact-section h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #002855;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e6e6e6;
+    padding-bottom: 8px;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-info, .contact-social {
+    flex: 1;
+    min-width: 300px;
+}
+
+.contact-info h3, .contact-social h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #003d80;
+    margin-bottom: 12px;
+}
+
+.contact-info p {
+    font-size: 15px;
+    color: #333;
+    margin: 4px 0;
+}
+
+.contact-social ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.contact-social li {
+    margin-bottom: 12px;
+}
+
+.contact-social a {
+    font-size: 16px;
+    color: #002855;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.2s ease;
+}
+
+.contact-social a:hover {
+    color: #0056b3;
+    transform: translateX(4px);
+}
+
+.social-icon {
+    width: 22px;
+    height: 22px;
+    opacity: 0.8;
+}
+
+
+        /* การ์ดผลงาน */
+        .project-card {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10px;
+            background: #fafafa;
+            box-shadow: 0 0 8px rgba(0,0,0,0.05);
+            align-items: center;
+        }
+        .project-card img {
+            width: 180px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+        .project-card img:hover {
+            transform: scale(1.03);
+        }
+        .project-info h3 {
+            margin: 0 0 5px 0;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 8px 14px;
+            background: #0066cc;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .btn:hover {
+            background: #004d99;
+        }
+        /* ส่วนทีมงาน */
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 15px;
+        }
+        .team-card {
+            flex: 1 1 180px;
+            min-width: 180px;
+            max-width: 220px;
+            text-align: center;
+            background: #fafafa;
+            border-radius: 10px;
+            padding: 15px 10px 20px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.05);
+            text-decoration: none;
+            color: #222;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .team-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+        }
+        .team-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 10px;
+    border: 3px solid #e5e7eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+}
+
+.team-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+
+        <div class="logo-wrap">
+            <img src="logo/logo-dch.png" alt="บริษัท เดชาชัย จำกัด" class="logo">
+        </div>
+
+        <div class="header-text">
+            <h1>Dechachai</h1>
+            <p>Epoxy & PU Flooring Specialist</p>
+        </div>
+
+        <div class="header-clock" id="header-clock"></div>
+
+    </div>
+</header>
+
+
+<div class="container">
+    <h2>Projects</h2>
+
+
+    <!-- การ์ดผลงาน 1 : Solar Rooftop -->
+   <div class="project-card">
+    <img src="เดชาชัย/4 กรก 2023/solar-cover.jpg" alt="Solar Rooftop Project">
+    <div class="project-info">
+        <h3>Solar Rooftop Installation Project</h3>
+        <p>งานติดตั้งระบบโซลาร์รูฟท็อปบนหลังคาอาคาร เพื่อช่วยลดค่าใช้จ่ายด้านพลังงาน โดยคำนึงถึงความปลอดภัยและมาตรฐานการติดตั้ง</p>
+        <a href="Solar-2023-07-04.html" class="btn">ดูรูปผลงาน</a>
+    </div>
+</div>
+
+     <!-- การ์ดผลงาน 2 -->
+     <div class="project-card">
+        <img src="เดชาชัย/1กรก2023/floor-cover.jpg" alt="Epoxy Floor Project">
+        <div class="project-info">
+            <h3>Epoxy Floor Project – 1 July 2023</h3>
+            <p>งานเคลือบพื้น Epoxy สำหรับห้องคลีนรูม / ห้องผลิตอุตสาหกรรม ทำผิวเรียบ เงา และทำความสะอาดง่าย</p>
+            <a href="project-2023-07-01.html" class="btn">ดูรูปผลงาน</a>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <h2>Our Team</h2>
+
+    <div class="team-grid">
+        <!-- นาย A -->
+        <a href="member-a.html" class="team-card">
+    <div class="team-avatar">
+        <img src="member images/member-a.jpg" alt="นาย A">
+    </div>
+    <h3>นาย A</h3>
+    <p>Owner / Founder</p>
+</a>
+
+<a href="member-b.html" class="team-card">
+    <div class="team-avatar">
+        <img src="member images/member-b.jpg" alt="นาย B">
+    </div>
+    <h3>นาย B</h3>
+    <p>รองหัวหน้าโครงการ</p>
+</a>
+
+<a href="member-c.html" class="team-card">
+    <div class="team-avatar">
+        <img src="member images/member-c.jpg" alt="นาย C">
+    </div>
+    <h3>นาย C</h3>
+    <p>พนักงานติดตั้งพื้น</p>
+</a>
+
+    </div>
+</div>
+ <div class="contact-section">
+
+    <h2>Contact & Social Media</h2>
+
+    <div class="contact-grid">
+
+        <div class="contact-info">
+            <h3>ติดต่อสอบถาม / ติดต่อทำงาน</h3>
+
+            <p><strong>บริษัท เดชาชัย จำกัด (Dechachai Co., Ltd.)</strong></p>
+            <p>ที่อยู่: 314 ซ.อ่อนนุช 70/1 แขวงประเวศ เขตประเวศ Bangkok 10250</p>
+            <p>โทรศัพท์: 094 498 3319 หรือ 087 698 7505 (คุณสุริยันต์)</p>
+            <p>อีเมล: dch.dechachai@gmail.com</p>
+        </div>
+
+        <div class="contact-social">
+            <h3>Social Media</h3>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=61575884949297" target="_blank">
+                        <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/733/733547.png">
+                        Facebook Page
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.tiktok.com/@youraccount" target="_blank">
+                        <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png">
+                        TikTok
+                    </a>
+                </li>
+                <li>
+                    <a href="https://line.me/R/ti/p/your-line-id" target="_blank">
+                        <img class="social-icon" src="https://cdn-icons-png.flaticon.com/512/2111/2111532.png">
+                        Line Official
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+
+<footer>
+    <footer>
+    
+    <p>© 2014–2025 Dechachai Co., Ltd. All rights reserved.</p>
+
+</footer>
+ <script>
+function updateClock() {
+    const clockEl = document.getElementById('header-clock');
+    if (!clockEl) return;
+
+    const now = new Date();
+    const options = {
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
+        timeZone: 'Asia/Bangkok'
+    };
+    clockEl.textContent = now.toLocaleTimeString('th-TH', options) + " (ICT)";
+}
+
+setInterval(updateClock, 1000);
+updateClock();
+
+</script>
+
+</script>
+
+
+
+</body>
+</html>
